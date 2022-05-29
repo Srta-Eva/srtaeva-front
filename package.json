@@ -65,6 +65,7 @@
     "prettier": "^2.6.2",
     "react-app-polyfill": "^3.0.0",
     "react-test-renderer": "^18.1.0",
+    "sass": "^1.52.1",
     "scheduler": "^0.21.0",
     "stylelint": "^14.8.2",
     "stylelint-config-prettier": "^9.0.3",

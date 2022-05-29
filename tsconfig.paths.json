@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "paths": {
-      "@styles": ["./styles/index.css"],
+      "@styles/*": ["./styles/*"],
       "@assets/*": ["./assets/*"],
       "@routes": ["./routes/index"],
       "@apis": ["./apis/index"],
