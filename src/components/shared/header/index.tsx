@@ -1,44 +1,28 @@
-import React from "react";
-import { Button, Link, Center, Text, IconButton, Box } from '@chakra-ui/react'
-import { NavLink, Link as ReactLink } from 'react-router-dom'
-import { HOME_PATH, PRODUCTS_PATH, SERVICES_PATH, US_PATH } from "@routes";
-import { HamburgerIcon } from "@chakra-ui/icons";
-import css from './index.module.scss'
+import React from 'react';
+import { Button, Link, Center, Text, IconButton, Box } from '@chakra-ui/react';
+import { NavLink, Link as ReactLink } from 'react-router-dom';
+import { HOME_PATH, PRODUCTS_PATH, SERVICES_PATH, US_PATH } from '@routes';
+import { HamburgerIcon } from '@chakra-ui/icons';
+import css from './index.module.scss';
 
 const Header: React.FC = () => {
   return (
-    <Box as='header' className={css['header']} borderColor="gray.200" bg='white'>
+    <Box as='header' className={css['header']} borderColor='gray.200' bg='white'>
       <Box className={css['header-box']}>
         <Box className={css['header-boxLogo']}>
           <Box className={css['header-menuBtn']}>
-            <IconButton
-              size="sm"
-              aria-label="Toggle menu"
-              icon={<HamburgerIcon />}
-            />
+            <IconButton size='sm' aria-label='Toggle menu' icon={<HamburgerIcon />} />
           </Box>
           <ReactLink to={HOME_PATH}> Srta. Eva </ReactLink>
         </Box>
-        <Box as="nav" className={css['header-nav']}>
-          <Link
-            as={NavLink}
-            to={US_PATH}
-            activeClassName="actived_link"
-          >
+        <Box as='nav' className={css['header-nav']}>
+          <Link as={NavLink} to={US_PATH} activeClassName='actived_link'>
             Nosotros
           </Link>
-          <Link
-            as={NavLink}
-            to={PRODUCTS_PATH}
-            activeClassName="actived_link"
-          >
+          <Link as={NavLink} to={PRODUCTS_PATH} activeClassName='actived_link'>
             Productos
           </Link>
-          <Link
-            as={NavLink}
-            to={SERVICES_PATH}
-            activeClassName="actived_link"
-          >
+          <Link as={NavLink} to={SERVICES_PATH} activeClassName='actived_link'>
             Servicios
           </Link>
         </Box>
@@ -48,28 +32,24 @@ const Header: React.FC = () => {
           </Box>
           <Center
             as={Button}
-            position="relative"
-            aria-label="Carrito de compras"
-            p={0} borderRadius="full"
+            position='relative'
+            aria-label='Carrito de compras'
+            p={0}
+            borderRadius='full'
           >
-            <Center as="span"> 🛒 </Center>
+            <Center as='span'> 🛒 </Center>
             <Center
-              as="span"
-              bg="red.600"
-              display="inline-flex"
-              position="absolute"
+              as='span'
+              bg='red.600'
+              display='inline-flex'
+              position='absolute'
               insetBlockEnd={-1}
               insetInlineStart={0}
               inlineSize={4}
               blockSize={4}
-              borderRadius="full"
+              borderRadius='full'
             >
-              <Text
-                as="span"
-                fontSize="0.6rem"
-                color="white"
-                fontWeight="bold"
-              >
+              <Text as='span' fontSize='0.6rem' color='white' fontWeight='bold'>
                 12
               </Text>
             </Center>
@@ -78,6 +58,6 @@ const Header: React.FC = () => {
       </Box>
     </Box>
   );
-}
+};
 
-export default Header
+export default Header;

@@ -1,18 +1,18 @@
-import { Header } from "@components"
-import React from "react"
+import { Header } from '@components';
+import React from 'react';
 
 interface NavBarLayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
-const NavBarLayout: React.FC<NavBarLayoutProps> = (props) => {
+const NavBarLayout: React.FC<NavBarLayoutProps> = props => {
   const { children } = props;
   return (
     <>
-      <Header/>
-      { children}
+      <Header />
+      {children}
     </>
-  )
-}
+  );
+};
 
-export default NavBarLayout
+export default NavBarLayout;

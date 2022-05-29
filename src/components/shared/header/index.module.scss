@@ -1,46 +1,41 @@
 .header {
   inline-size: 100%;
-  border-block-end: solid 1px;
-
   position: sticky;
-  inset-block-start: 0;
   z-index: 10;
+  border-block-end: solid 1px;
+  inset-block-start: 0;
 
   &-box {
-    max-inline-size: 960px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-self: center;
-    column-gap: 1rem;
-    padding: 1rem;
     box-sizing: border-box;
-    
-    transition: all .4s;
+    display: flex;
+    column-gap: 1rem;
+    align-self: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: auto;
+    transition: all 0.4s;
+    max-inline-size: 960px;
   }
 
   &-boxLogo {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
     column-gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
   }
 
   &-nav {
     display: none;
-    justify-content: flex-start;
-    align-items: center;
-
     column-gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
   }
 
   &-boxBtns {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
     column-gap: 1rem;
+    align-items: center;
+    justify-content: flex-end;
   }
 
   &-loginBtn {
@@ -48,7 +43,7 @@
   }
 }
 
-@media screen and (min-width:428px) {
+@media screen and (min-width: 428px) {
   .header {
     &-box {
       padding: 1rem 1.5rem;
@@ -60,7 +55,7 @@
   }
 }
 
-@media screen and (min-width:668px) {
+@media screen and (min-width: 668px) {
   .header {
     &-box {
       justify-content: flex-start;
@@ -77,7 +72,7 @@
   }
 }
 
-@media screen and (min-width:960px) {
+@media screen and (min-width: 960px) {
   .header {
     &-box {
       padding: 1rem 0;

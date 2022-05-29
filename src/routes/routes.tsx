@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Home } from '@pages';
 import { useRoutes } from 'react-router-dom';
-import { HOME_PATH,US_PATH, PRODUCTS_PATH, PRODUCT_PATH, SERVICES_PATH } from './name';
+import { HOME_PATH, US_PATH, PRODUCTS_PATH, PRODUCT_PATH, SERVICES_PATH } from './name';
 
 const PrivateRoutes: FC = function () {
   const Routes = useRoutes([
