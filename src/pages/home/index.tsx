@@ -1,25 +1,8 @@
-import icon from '@assets/images/logo.svg';
+import React from "react";
 
-import { FC, useState } from 'react';
-
-const Home: FC = function () {
-  const [count, setCount] = useState(0);
-
+const Home: React.FC = () => {
   return (
-    <>
-      <img src={icon} />
-      <h1 data-testid='title'>
-        count is {count}
-      </h1>
-      <div>
-        <button onClick={() => setCount(val => val + 1)} data-testid='increment'>
-          increment
-        </button>
-        <button onClick={() => setCount(val => val - 1)} data-testid='reduce'>
-          reduce
-        </button>
-      </div>
-    </>
+    <p>Contenido </p>
   );
 };
 
