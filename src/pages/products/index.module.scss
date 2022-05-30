@@ -1,10 +1,14 @@
 .root {
-  inline-size: 100%;
+  box-sizing: border-box;
   padding: 2rem;
   padding-block-start: 1rem;
-  box-sizing: border-box;
+  inline-size: 100%;
 
   &-breadcrumb {
+    margin-block-end: 1rem;
+  }
+
+  &-search {
     margin-block-end: 1rem;
   }
 }

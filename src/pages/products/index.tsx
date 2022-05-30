@@ -1,6 +1,5 @@
-import { SearchIcon, SmallCloseIcon } from "@chakra-ui/icons";
-import { Box, IconButton, Input, InputGroup, InputLeftElement, InputRightElement } from "@chakra-ui/react"
-import { Breadcrumb, ItemCard, ProductsFilter } from "@components"
+import { Box } from "@chakra-ui/react"
+import { Breadcrumb, ItemCard, ProductsFilter, SearchInput } from "@components"
 import { ProductsGrid, MainWithFilter } from "@layouts"
 import css from './index.module.scss';
 
@@ -91,19 +90,8 @@ const Products = () => {
         <Box className={css['root-breadcrumb']}>
           <Breadcrumb items={breadcrumbs} />
         </Box>
-        <InputGroup marginBlockEnd={4}>
-          <InputLeftElement pointerEvents='none'>
-            <SearchIcon color='gray.400' />
-          </InputLeftElement>
-          <Input type='text' placeholder="¿Que estás buscando hoy?" />
-          <InputRightElement width='4.5rem'>
-            <IconButton
-              aria-label='Borrar buscador'
-              icon={<SmallCloseIcon color="gray.400" />}
-              variant='unstyled'
-            />
-          </InputRightElement>
-        </InputGroup>
+        
+        <SearchInput className={css['root-search']} />
 
         <ProductsGrid>
           {items.map(({ name, rate, price, image, specialPrice}, index) => (
