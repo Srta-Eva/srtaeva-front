@@ -9,4 +9,7 @@ export { default as Header } from './shared/header';
 export { default as ItemCard } from './shared/cards/itemCard';
 
 //Components
-export { default as ProductsFilter } from './productsFilter';
+export { default as ProductsFilter } from './ProductsFilter';
+export { default as LabelFilter } from './ProductsFilter/LabelFilter';
+export { default as RadioBtnGroupFilter } from './ProductsFilter/RadioBtnGroupFilter';
+export { default as SliderFilter } from './ProductsFilter/SliderFilter';

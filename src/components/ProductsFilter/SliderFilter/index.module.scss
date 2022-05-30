@@ -1,0 +1,17 @@
+.root {
+  &-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-stat {
+    &-start {
+      text-align: start;
+    }
+
+    &-end {
+      text-align: end;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.root {
+  position: sticky;
+  inset-block-start: calc(72px + 1rem);
+
+  &-header {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding: 1rem;
+  }
+}
