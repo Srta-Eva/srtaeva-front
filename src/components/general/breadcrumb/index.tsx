@@ -2,7 +2,6 @@ import React from "react";
 import { Breadcrumb as BreadcrumbChakra, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react"
 import { Link } from "react-router-dom";
 import cn from 'classnames';
-import css from './index.module.scss';
 import { ChevronRightIcon } from "@chakra-ui/icons";
 
 type BreadcrumbItemProps = {
@@ -20,7 +19,7 @@ const Breadcrumb:React.FC<BreadcrumbProps> = (props) => {
 
   return (
     <BreadcrumbChakra
-      className={cn(css['root'], className)}
+      className={cn(className)}
       fontWeight='normal' fontSize='sm' spacing='8px'
       separator={<ChevronRightIcon color='gray.400' />}
     >

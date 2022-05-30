@@ -3,6 +3,7 @@ import { Box, Button, Divider, Image, Stat, StatNumber, Text } from "@chakra-ui/
 import css from './index.module.scss';
 import { ThousandSeparator } from "@utils";
 import {ButtonGroup} from "@components";
+import { Link } from "react-router-dom";
 
 interface ItemCardProps {
   name: string;
@@ -23,7 +24,7 @@ const ItemCard:React.FC<ItemCardProps> = (props) => {
       boxShadow='md'
     >
       <Box className={css['root-content']}>
-        <Box className={css['root-img']}>
+        <Box as={Link} to="#" className={css['root-img']}>
           <Image
             className={css['root-img-content']}
             src={image}
@@ -32,22 +33,24 @@ const ItemCard:React.FC<ItemCardProps> = (props) => {
           />
         </Box>
         <Box as="main" className={css['root-body']}>
-          <Text
-            fontSize="lg"
-            className={css['root-title']}
-          >
-            {name}
-          </Text>
-          <Box className={css['root-stars']}>
-            ⭐⭐⭐⭐⭐
-          </Box>
-          <Stat className={css['root-price']}>
-            <StatNumber>${ThousandSeparator(price)}</StatNumber>
-          </Stat>
+          <Link to="#">
+            <Text
+              fontSize="lg"
+              className={css['root-title']}
+            >
+              {name}
+            </Text>
+            <Box className={css['root-stars']}>
+              ⭐⭐⭐⭐⭐
+            </Box>
+            <Stat className={css['root-price']}>
+              <StatNumber>${ThousandSeparator(price)}</StatNumber>
+            </Stat>
 
-          {specialPrice && <Stat>
-            <StatNumber>${ThousandSeparator(specialPrice)}</StatNumber>
-          </Stat>}
+            {specialPrice && <Stat>
+              <StatNumber>${ThousandSeparator(specialPrice)}</StatNumber>
+            </Stat>}
+          </Link>
 
           <Divider className={css['root-divider']}/>
           <Box className={css['root-btnGroup']}>

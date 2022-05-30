@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Link, Center, Text, IconButton, Box } from '@chakra-ui/react';
+import { Button, Center, Text, IconButton, Box } from '@chakra-ui/react';
 import { NavLink, Link as ReactLink } from 'react-router-dom';
 import { HOME_PATH, PRODUCTS_PATH, SERVICES_PATH, US_PATH } from '@routes';
 import { HamburgerIcon } from '@chakra-ui/icons';
