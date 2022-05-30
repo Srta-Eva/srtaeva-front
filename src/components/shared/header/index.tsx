@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink, Link as ReactLink } from 'react-router-dom';
 import {
   Button,
   Center,
@@ -9,21 +10,29 @@ import {
   useMediaQuery,
   ScaleFade,
 } from '@chakra-ui/react';
-import { NavLink, Link as ReactLink } from 'react-router-dom';
-import { HOME_PATH, PRODUCTS_PATH, SERVICES_PATH, US_PATH } from '@routes';
 import { HamburgerIcon } from '@chakra-ui/icons';
+import { NavDrawer } from '@components';
+import { HOME_PATH, PRODUCTS_PATH, SERVICES_PATH, US_PATH } from '@routes';
 import css from './index.module.scss';
 
 const Header: React.FC = () => {
   const [isLargerThan428] = useMediaQuery('(min-width: 428px)');
   const [isLargerThan668] = useMediaQuery('(min-width: 668px)');
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const onHandleDrawer = (value: boolean) => setIsOpen(value);
 
   return (
     <Box as='header' className={css['header']} borderColor='gray.200' bg='white' zIndex='sticky'>
       <Box className={css['header-box']}>
         <Box className={css['header-boxLogo']}>
           <ScaleFade in={!isLargerThan668} unmountOnExit>
-            <IconButton size='sm' aria-label='Toggle menu' icon={<HamburgerIcon />} />
+            <IconButton
+              size='sm'
+              aria-label='Toggle menu'
+              icon={<HamburgerIcon />}
+              onClick={() => onHandleDrawer(true)}
+            />
           </ScaleFade>
           <ReactLink to={HOME_PATH}> Srta. Eva </ReactLink>
         </Box>
@@ -80,6 +89,7 @@ const Header: React.FC = () => {
           </Center>
         </Box>
       </Box>
+      <NavDrawer open={isOpen} onClose={() => onHandleDrawer(false)} />
     </Box>
   );
 };

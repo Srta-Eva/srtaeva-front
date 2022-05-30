@@ -6,6 +6,7 @@ export { default as SearchInput } from './general/searchInput';
 
 // Shared
 export { default as Header } from './shared/header';
+export { default as NavDrawer } from './shared/header/NavDrawer';
 export { default as ItemCard } from './shared/cards/itemCard';
 
 //Components
