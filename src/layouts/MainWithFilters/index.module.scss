@@ -1,15 +1,15 @@
 .root {
-  inline-size: 100%;
-  max-inline-size: 1200px;
-  margin: auto;
   display: grid;
   grid-template-columns: 1fr;
+  margin: auto;
+  inline-size: 100%;
+  max-inline-size: 1200px;
 
   &-aside {
     box-sizing: border-box;
+    display: none;
     padding: 1rem;
     border-inline-end: solid 1px;
-    display: none;
   }
 }
 

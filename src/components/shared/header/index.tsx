@@ -11,16 +11,19 @@ import {
   ScaleFade,
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
-import { NavDrawer } from '@components';
+import { NavDrawer, SCDrawer } from '@components';
 import { HOME_PATH, PRODUCTS_PATH, SERVICES_PATH, US_PATH } from '@routes';
 import css from './index.module.scss';
 
 const Header: React.FC = () => {
   const [isLargerThan428] = useMediaQuery('(min-width: 428px)');
   const [isLargerThan668] = useMediaQuery('(min-width: 668px)');
-  const [isOpen, setIsOpen] = React.useState(false);
 
-  const onHandleDrawer = (value: boolean) => setIsOpen(value);
+  const [isNavDrawerOpen, setIsNavDrawerOpen] = React.useState(false);
+  const [isSCDrawerOpen, setIsSCDrawerOpen] = React.useState(false);
+
+  const onHandleNavDrawer = (value: boolean) => setIsNavDrawerOpen(value);
+  const onHandleSCDrawer = (value: boolean) => setIsSCDrawerOpen(value);
 
   return (
     <Box as='header' className={css['header']} borderColor='gray.200' bg='white' zIndex='sticky'>
@@ -30,8 +33,9 @@ const Header: React.FC = () => {
             <IconButton
               size='sm'
               aria-label='Toggle menu'
+              variant='ghost'
               icon={<HamburgerIcon />}
-              onClick={() => onHandleDrawer(true)}
+              onClick={() => onHandleNavDrawer(true)}
             />
           </ScaleFade>
           <ReactLink to={HOME_PATH}> Srta. Eva </ReactLink>
@@ -69,6 +73,7 @@ const Header: React.FC = () => {
             aria-label='Carrito de compras'
             p={0}
             borderRadius='full'
+            onClick={() => onHandleSCDrawer(true)}
           >
             <Center as='span'> 🛒 </Center>
             <Center
@@ -89,7 +94,8 @@ const Header: React.FC = () => {
           </Center>
         </Box>
       </Box>
-      <NavDrawer open={isOpen} onClose={() => onHandleDrawer(false)} />
+      <NavDrawer open={isNavDrawerOpen} onClose={() => onHandleNavDrawer(false)} />
+      <SCDrawer open={isSCDrawerOpen} onClose={() => onHandleSCDrawer(false)} />
     </Box>
   );
 };
