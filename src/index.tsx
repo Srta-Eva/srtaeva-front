@@ -5,6 +5,7 @@ import { RecoilRoot } from 'recoil';
 import { StrictMode } from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
 import NavBarLayout from './layouts/NavBarLayout';
+import '@styles/index.scss';
 
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const root = createRoot(document.getElementById('root')!);
@@ -12,7 +13,7 @@ const root = createRoot(document.getElementById('root')!);
 root.render(
   <StrictMode>
     <RecoilRoot>
-      <ChakraProvider>
+      <ChakraProvider resetCSS>
         <Router>
           <NavBarLayout>
             <PrivateRoutes />
