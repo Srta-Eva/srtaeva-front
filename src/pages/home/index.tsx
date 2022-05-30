@@ -1,10 +1,11 @@
-import { Title } from '@components';
 import React from 'react';
+import { Title } from '@components';
 
 const Home: React.FC = () => {
   return (
     <div>
-      <Title>Hola</Title>
+      <Title>Promociones 🔥</Title>
+      
     </div>
   );
 };

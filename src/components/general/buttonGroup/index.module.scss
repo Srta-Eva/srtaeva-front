@@ -1,0 +1,25 @@
+.root {
+  display: flex;
+    
+  &-fullwidth {
+    inline-size: 100%;
+  }
+
+  &-fullwidth > &-item{
+    flex: 1;
+  }
+
+  &-item:not(:first-child) {
+    border-inline-start: 0;
+  }
+
+  &-item:first-child {
+    border-start-start-radius: 0.5rem;
+    border-end-start-radius: 0.5rem;
+  }
+
+  &-item:last-child {
+    border-start-end-radius: 0.5rem;
+    border-end-end-radius: 0.5rem; 
+  }
+}

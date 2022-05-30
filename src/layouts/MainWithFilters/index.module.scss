@@ -1,0 +1,11 @@
+.root {
+  inline-size: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 280px) 1fr;
+
+  &-aside {
+    box-sizing: border-box;
+    padding: 1rem;
+    border-inline-end: solid 1px;
+  }
+}

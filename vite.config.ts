@@ -31,6 +31,7 @@ export default defineConfig({
       '@components': resolve(__dirname, 'src/components/index'),
       '@hooks': resolve(__dirname, 'src/hooks/index'),
       '@pages': resolve(__dirname, 'src/pages'),
+      '@layouts': resolve(__dirname, 'src/layouts'),
       '@stores': resolve(__dirname, 'src/stores/index'),
       '@utils': resolve(__dirname, 'src/utils/index'),
     },

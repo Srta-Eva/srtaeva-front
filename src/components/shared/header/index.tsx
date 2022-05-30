@@ -7,7 +7,7 @@ import css from './index.module.scss';
 
 const Header: React.FC = () => {
   return (
-    <Box as='header' className={css['header']} borderColor='gray.200' bg='white'>
+    <Box as='header' className={css['header']} borderColor='gray.200' bg='white' zIndex="sticky">
       <Box className={css['header-box']}>
         <Box className={css['header-boxLogo']}>
           <Box className={css['header-menuBtn']}>
@@ -16,15 +16,24 @@ const Header: React.FC = () => {
           <ReactLink to={HOME_PATH}> Srta. Eva </ReactLink>
         </Box>
         <Box as='nav' className={css['header-nav']}>
-          <Link as={NavLink} to={US_PATH} activeClassName='actived_link'>
+          <NavLink
+            to={US_PATH}
+            className={({ isActive}) => isActive ? css['header-nav-item-active'] : ''}
+          >
             Nosotros
-          </Link>
-          <Link as={NavLink} to={PRODUCTS_PATH} activeClassName='actived_link'>
+          </NavLink>
+          <NavLink
+            to={PRODUCTS_PATH}
+            className={({ isActive}) => isActive ? css['header-nav-item-active'] : ''}
+          >
             Productos
-          </Link>
-          <Link as={NavLink} to={SERVICES_PATH} activeClassName='actived_link'>
+          </NavLink>
+          <NavLink
+            to={SERVICES_PATH}
+            className={({ isActive}) => isActive ? css['header-nav-item-active'] : ''}
+          >
             Servicios
-          </Link>
+          </NavLink>
         </Box>
         <Box className={css['header-boxBtns']}>
           <Box className={css['header-loginBtn']}>

@@ -1,0 +1,10 @@
+.root {
+  inline-size: 100%;
+  padding: 2rem;
+  padding-block-start: 1rem;
+  box-sizing: border-box;
+
+  &-breadcrumb {
+    margin-block-end: 1rem;
+  }
+}
