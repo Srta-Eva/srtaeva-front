@@ -1,8 +1,9 @@
 .root {
   box-sizing: border-box;
-  padding: 2rem;
+  padding: 1rem;
   padding-block-start: 1rem;
   inline-size: 100%;
+  transition: all .4s;
 
   &-breadcrumb {
     margin-block-end: 1rem;
@@ -10,5 +11,12 @@
 
   &-search {
     margin-block-end: 1rem;
+  }
+}
+
+@media screen and (min-width: 428px) {
+  .root {
+    padding: 2rem;
+    padding-block-start: 1rem;
   }
 }

@@ -1,11 +1,24 @@
 .root {
   inline-size: 100%;
+  max-inline-size: 1200px;
+  margin: auto;
   display: grid;
-  grid-template-columns: minmax(0, 280px) 1fr;
+  grid-template-columns: 1fr;
 
   &-aside {
     box-sizing: border-box;
     padding: 1rem;
     border-inline-end: solid 1px;
+    display: none;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .root {
+    grid-template-columns: minmax(0, 270px) 1fr;
+
+    &-aside {
+      display: block;
+    }
   }
 }
