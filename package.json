@@ -1,6 +1,6 @@
 {
   "name": "srta_eva",
-  "homepage": "https://srtaeva-front.vercel.app/",
+  "homepage": ".",
   "private": true,
   "version": "0.0.1",
   "scripts": {
